@@ -7,8 +7,14 @@ class CleanSwiper extends StatefulWidget {
 
   final List<Widget> children;
   final double viewportFraction;
+  final int initialPage;
 
-  CleanSwiper({Key key, @required this.children, this.viewportFraction = 0.8}) : super(key: key);
+  CleanSwiper({
+    Key key,
+    @required this.children,
+    this.viewportFraction = 0.8,
+    this.initialPage = 0
+  }) : super(key: key);
 }
 
 class _CleanSwiperState extends State<CleanSwiper> {
@@ -17,7 +23,10 @@ class _CleanSwiperState extends State<CleanSwiper> {
   @override
   void initState() {
     super.initState();
-    controller = PageController(initialPage: 1, viewportFraction: widget.viewportFraction);
+    controller = PageController(
+      initialPage: widget.initialPage, 
+      viewportFraction: widget.viewportFraction
+    );
   }
 
   @override
