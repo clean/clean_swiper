@@ -1,3 +1,7 @@
+## [0.0.4] - 19 Nov 2019
+
+* Code formatting based on pub.dev qa checks
+
 ## [0.0.3] - 19 Nov 2019
 
 * Added example usage
