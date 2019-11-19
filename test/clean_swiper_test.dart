@@ -1,13 +1,20 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:clean_swiper/clean_swiper.dart';
 
 void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
-    expect(() => calculator.addOne(null), throwsNoSuchMethodError);
+  testWidgets('CleanSwiper instance check', (WidgetTester tester) async {
+    // Create the widget by telling the tester to build it.
+    await tester.pumpWidget(
+      MaterialApp(
+        home: CleanSwiper(
+          children: <Widget>[
+            Container(),
+            Container(),
+          ],
+        ))
+      );
+    expect(find.byType(CleanSwiper), findsOneWidget);
   });
 }
