@@ -1,3 +1,8 @@
+## [0.0.3] - 19 Nov 2019
+
+* Added example usage
+* Added readme
+
 ## [0.0.2] - 17 Nov 2019
 
 * initalPage param added
