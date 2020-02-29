@@ -1,3 +1,7 @@
+## [0.0.5] - 19 Nov 2019
+
+* Allow to pass own controller to CleanSwiper
+
 ## [0.0.4] - 19 Nov 2019
 
 * Code formatting based on pub.dev qa checks
