@@ -15,6 +15,10 @@ class MyApp extends StatelessWidget {
 }
 
 class ExamplePage extends StatelessWidget {
+  final _pageController = PageController(
+    initialPage: 1
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,6 +88,7 @@ class ExamplePage extends StatelessWidget {
             height: 30,
             color: Colors.white38,
             child: CleanSwiper(
+              controller: _pageController,
               viewportFraction: 1,
               children: <Widget>[
                 Text('Text 1', textAlign: TextAlign.center,),

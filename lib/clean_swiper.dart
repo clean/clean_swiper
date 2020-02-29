@@ -1,5 +1,7 @@
 library clean_swiper;
 
+import 'dart:ui';
+
 import 'package:flutter/widgets.dart';
 
 class CleanSwiper extends StatefulWidget {
@@ -9,10 +11,12 @@ class CleanSwiper extends StatefulWidget {
   final List<Widget> children;
   final double viewportFraction;
   final int initialPage;
+  PageController controller;
 
   CleanSwiper(
       {Key key,
       @required this.children,
+      this.controller,
       this.viewportFraction = 0.8,
       this.initialPage = 0})
       : super(key: key);
@@ -24,9 +28,12 @@ class _CleanSwiperState extends State<CleanSwiper> {
   @override
   void initState() {
     super.initState();
-    controller = PageController(
-        initialPage: widget.initialPage,
-        viewportFraction: widget.viewportFraction);
+
+    (widget.controller != null)
+      ? controller = widget.controller
+      : controller = PageController(
+          initialPage: widget.initialPage,
+          viewportFraction: widget.viewportFraction);
   }
 
   @override
